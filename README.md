@@ -1,2 +1,2 @@
 # vexan
-This is a leading scanners manufacturing company
+This is a leading scanners manufacturing company.
