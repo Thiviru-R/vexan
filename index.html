@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
+       <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PhotoCopy Pro - Your Photocopy Machine Experts</title>
-    <meta name="description" content="PhotoCopy Pro offers the best photocopy machines, supplies, and services. Explore our range of high-quality copiers for your business needs.">
+    <title>VIXON</title>
+    <meta name="description" content="Vixon offers the best photocopy machines, supplies, and services. Explore our range of high-quality copiers for your business needs.">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- Add Google Fonts Link -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
     <style>
         /* Basic CSS for the website */
         body {
@@ -15,25 +17,37 @@
             background-color: #f4f4f4;
             color: #333;
         }
-        header {
-            background-color: #0073e6;
-            color: #fff;
-            padding: 20px;
-            text-align: center;
-            position: relative;
-            overflow: hidden;
-        }
-        header::before {
-            content: "";
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: url('https://www.transparenttextures.com/patterns/flowers.png');
-            opacity: 0.1;
-            z-index: 1;
-        }
+       header {
+    background-color: #0073e6;
+    color: #fff;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between; /* Aligns content to the edges */
+    align-items: center; /* Vertically centers content */
+    position: relative;
+    overflow: hidden;
+}
+
+header::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('https://www.transparenttextures.com/patterns/flowers.png');
+    opacity: 0.1;
+    z-index: 1;
+}
+
+/* Header Content (Title and Tagline) */
+.header-content {
+    text-align: center;
+    flex: 1; /* Takes up remaining space */
+    position: relative;
+    z-index: 2;
+}
+
         header h1, header p {
             position: relative;
             z-index: 2;
@@ -71,7 +85,7 @@
             color: #ffdd57;
         }
         .hero {
-            background: url('https://images.unsplash.com/photo-1581092580497-e0d23cbdf1dc?ixlib=rb-1.2.1&auto=format&fit=crop&w=1500&q=80') no-repeat center center/cover;
+            background: url('images/hero-image.jpg') no-repeat center center/cover;
             height: 400px;
             display: flex;
             align-items: center;
@@ -191,6 +205,7 @@
         .product button:hover, .service button:hover {
             background-color: #005bb5;
         }
+		
         .video-container {
             margin: 40px 0;
         }
@@ -240,14 +255,275 @@
             from { transform: translateY(50px); opacity: 0; }
             to { transform: translateY(0); opacity: 1; }
         }
+		}
+
+		/* Logo Container */
+		.logo-container {
+			position: relative;
+			z-index: 2;
+		}
+		.logo {
+			width: 100px; /* Adjust the size of the logo */
+			height: auto; /* Maintain aspect ratio */
+			border-radius: 10px; /* Optional: Add rounded corners */
+			box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Optional: Add a shadow */
+		}
+		/* New Release Section */
+.new-release {
+    padding: 40px 20px;
+    background-color: #fff;
+    margin: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    animation: slideUp 1s ease-in-out;
+}
+
+.new-release-content {
+    display: flex;
+    align-items: center;
+    gap: 40px; /* Space between image and description */
+}
+
+.new-release-image {
+    flex: 1;
+}
+
+.new-release-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.new-release-description {
+    flex: 1;
+}
+
+.new-release-description h2 {
+    font-size: 2.5rem;
+    color: #0073e6;
+    margin-bottom: 20px;
+}
+
+.new-release-description p {
+    font-size: 1.1rem;
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.new-release-description button {
+    background-color: #0073e6;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.new-release-description button:hover {
+    background-color: #005bb5;
+}
+
+/* Responsive Design for New Release Section */
+@media (max-width: 500px) {
+    .new-release-content {
+        flex-direction: column; /* Stack image and description on small screens */
+    }
+
+    .new-release-image, .new-release-description {
+        flex: none;
+        width: 100%;
+    }
+}
+/* About Us Section */
+.about {
+    padding: 40px 20px;
+    background-color: #fff;
+    margin: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    animation: slideUp 1s ease-in-out;
+}
+
+.about-content {
+    display: flex;
+    align-items: center;
+    gap: 40px; /* Space between video and description */
+}
+
+.about-video {
+    flex: 1;
+}
+
+.about-video iframe {
+    width: 100%;
+    height: 300px; /* Adjust height as needed */
+    border: none;
+    border-radius: 10px;
+}
+
+.about-description {
+    flex: 1;
+    text-align: center;
+}
+
+.about-logo img {
+    width: 150px; /* Adjust logo size */
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.about-description h2 {
+    font-size: 2.5rem;
+    color: #0073e6;
+    margin-bottom: 20px;
+}
+
+.about-description p {
+    font-size: 1.1rem;
+    color: #555;
+    line-height: 1.6;
+}
+
+/* Responsive Design for About Us Section */
+@media (max-width: 768px) {
+    .about-content {
+        flex-direction: column; /* Stack video and description on small screens */
+    }
+
+    .about-video, .about-description {
+        flex: none;
+        width: 100%;
+    }
+
+    .about-video iframe {
+        height: 200px; /* Adjust height for smaller screens */
+    }
+}
+/* Contact Us Section */
+.contact {
+    padding: 40px 20px;
+    background-color: #fff;
+    margin: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    animation: slideUp 1s ease-in-out;
+}
+
+.contact h2 {
+    font-size: 2.5rem;
+    color: #0073e6;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.contact-content {
+    display: flex;
+    gap: 40px; /* Space between info and form */
+}
+
+.contact-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Space between contact items */
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 15px; /* Space between icon and text */
+    background: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-item:hover {
+    transform: translateY(-5px); /* Slight lift on hover */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.contact-item i {
+    font-size: 1.5rem;
+    color: #0073e6;
+}
+
+.contact-item h3 {
+    font-size: 1.2rem;
+    color: #0073e6;
+    margin: 0;
+}
+
+.contact-item p {
+    font-size: 1rem;
+    color: #555;
+    margin: 0;
+}
+
+.contact-form {
+    flex: 1;
+}
+
+.contact-form form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Space between form fields */
+}
+
+.contact-form input, .contact-form textarea {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.contact-form textarea {
+    resize: vertical; /* Allow vertical resizing */
+    min-height: 150px;
+}
+
+.contact-form button {
+    background-color: #0073e6;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.contact-form button:hover {
+    background-color: #005bb5;
+}
+
+/* Responsive Design for Contact Section */
+@media (max-width: 768px) {
+    .contact-content {
+        flex-direction: column; /* Stack info and form on small screens */
+    }
+
+    .contact-info, .contact-form {
+        flex: none;
+        width: 100%;
+    }
+}
     </style>
 </head>
 <body>
 
     <!-- Header Section -->
     <header>
-        <h1>PhotoCopy Pro</h1>
-        <p>Your Trusted Partner in Photocopy Solutions</p>
+    <div class="logo-container">
+        <img src="images/logo.png" alt="Company Logo" class="logo">
+    </div>
+    <h1>VIXON</h1>
+    <p></p>
     </header>
 
     <!-- Navigation Menu -->
@@ -261,29 +537,55 @@
 
     <!-- Hero Section -->
     <section class="hero" id="home">
-        <h1>High-Quality Photocopy Machines for Your Business</h1>
+        <h1>High-Quality Printing and Scanning Machines for Your Business</h1>
     </section>
+<section class="new-release">
+    <div class="new-release-content">
+        <div class="new-release-image">
+            <img src="images/new-release.jpg" alt="New Release Product" width="100" height="175">
+        </div>
+        <div class="new-release-description">
+            <h2>New Release</h2>
+            <p>Revolutionize Scanning with the Automatic Page-Turning Scanner
 
+Say goodbye to manual page flipping and hello to seamless automation! Our Automatic Page-Turning Scanner is designed to streamline document digitization like never before. Whether you’re scanning books, reports, or bound documents, this cutting-edge device automatically turns pages, scans with precision, and delivers high-quality digital copies—all without damaging delicate materials.
+
+Upgrade to next-gen scanning technology and digitize with ease!</p>
+            <button>Learn More</button>
+        </div>
+    </div>
+</section>
+
+<!-- Products Section -->
+<section class="products" id="products">
+    <!-- Existing Products Content -->
+</section>
     <!-- Products Section -->
     <section class="products" id="products">
         <h2>Our Products</h2>
         <div class="product-grid">
             <div class="product">
-                <img src="https://images.unsplash.com/photo-1581092580497-e0d23cbdf1dc?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Photocopy Machine Model X1">
+                <img src="images/product1.jpg" alt="Photocopy Machine Model X1">
                 <h3>Model X1</h3>
                 <p>High-speed photocopy machine with advanced features.</p>
                 <button>Learn More</button>
             </div>
             <div class="product">
-                <img src="https://images.unsplash.com/photo-1581092580497-e0d23cbdf1dc?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Photocopy Machine Model X2">
+                <img src="images/product2.jpg" alt="Photocopy Machine Model X2">
                 <h3>Model X2</h3>
                 <p>Compact and efficient for small businesses.</p>
                 <button>Learn More</button>
             </div>
             <div class="product">
-                <img src="https://images.unsplash.com/photo-1581092580497-e0d23cbdf1dc?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Photocopy Machine Model X3">
+                <img src="images/product3.jpg" alt="Photocopy Machine Model X3">
                 <h3>Model X3</h3>
-                <p>Professional-grade copier for large-scale operations.</p>
+                <p>Professional-grade copier for small-scale operations.</p>
+                <button>Learn More</button>
+            </div>
+			<div class="product">
+                <img src="images/product4.jpg" alt="Photocopy Machine Model X4">
+                <h3>Model X4</h3>
+                <p>Professional-grade copier for large-scale industries with cutting-edge technology.</p>
                 <button>Learn More</button>
             </div>
         </div>
@@ -294,47 +596,74 @@
         <h2>Our Services</h2>
         <div class="service-grid">
             <div class="service">
-                <img src="https://images.unsplash.com/photo-1581092580497-e0d23cbdf1dc?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Machine Installation">
+                <img src="images/service1.png" alt="Machine Installation" width="100" height="100">
                 <h3>Installation</h3>
                 <p>Professional installation of your photocopy machines.</p>
             </div>
             <div class="service">
-                <img src="https://images.unsplash.com/photo-1581092580497-e0d23cbdf1dc?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Maintenance and Repair">
+                <img src="images/service2.png" alt="Maintenance and Repair" width="100" height="100">
                 <h3>Maintenance</h3>
                 <p>Regular maintenance and repair services.</p>
             </div>
             <div class="service">
-                <img src="https://images.unsplash.com/photo-1581092580497-e0d23cbdf1dc?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Supplies and Accessories">
+                <img src="images/service3.png" alt="Supplies and Accessories" width="100" height="100">
                 <h3>Supplies</h3>
                 <p>High-quality toner, ink, and other supplies.</p>
             </div>
         </div>
     </section>
 
-    <!-- About Us Section -->
-    <section class="about" id="about">
-        <h2>About Us</h2>
-        <p>PhotoCopy Pro has been a leader in the photocopy industry for over 20 years. We provide cutting-edge photocopy machines and exceptional customer service to businesses of all sizes.</p>
-        <div class="video-container">
+ <!-- About Us Section -->
+<section class="about" id="about">
+    <div class="about-content">
+        <div class="about-video">
             <iframe src="https://www.youtube.com/embed/your-video-id" allowfullscreen></iframe>
         </div>
-    </section>
+        <div class="about-description">
+            <div class="about-logo">
+                <img src="images/logo.png" alt="Company Logo">
+            </div>
+            <h2>About Us</h2>
+            <p>VIXON has been a leader in the printing industry for over 20 years. We provide cutting-edge printing machines and exceptional customer service to businesses of all sizes. Our mission is to deliver innovative solutions that enhance productivity and efficiency.</p>
+        </div>
+    </div>
+</section>
 
-    <!-- Contact Section -->
-    <section class="contact" id="contact">
-        <h2>Contact Us</h2>
-        <p>Have questions? Reach out to us!</p>
-        <form>
-            <input type="text" placeholder="Your Name" required>
-            <input type="email" placeholder="Your Email" required>
-            <textarea placeholder="Your Message" required></textarea>
-            <button type="submit">Send Message</button>
-        </form>
-    </section>
+<!-- Contact Us Section -->
+<section class="contact" id="contact">
+    <h2>Contact Us</h2>
+    <div class="contact-content">
+        <div class="contact-info">
+            <div class="contact-item">
+                <i class="fas fa-map-marker-alt"></i>
+                <h3>Address</h3>
+                <p>123 Maradana Rd, Colobo 5, ZIP Code  10115</p>
+            </div>
+            <div class="contact-item">
+                <i class="fas fa-phone"></i>
+                <h3>Phone</h3>
+                <p>+1 (123) 456-7890</p>
+            </div>
+            <div class="contact-item">
+                <i class="fas fa-envelope"></i>
+                <h3>Email</h3>
+                <p>info@vixon.com</p>
+            </div>
+        </div>
+        <div class="contact-form">
+            <form>
+                <input type="text" placeholder="Your Name" required>
+                <input type="email" placeholder="Your Email" required>
+                <textarea placeholder="Your Message" required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+        </div>
+    </div>
+</section>
 
     <!-- Footer Section -->
     <footer>
-        <p>&copy; 2023 PhotoCopy Pro. All rights reserved.</p>
+        <p>&copy; 2025 VIXON.com All rights reserved.</p>
         <div class="social-links">
             <a href="#"><i class="fab fa-facebook"></i></a>
             <a href="#"><i class="fab fa-twitter"></i></a>
